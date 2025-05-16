@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReferAI</title>
+</head>
+<body>
+    <main>
+        <h1>Police Patrol Route Optimization</h1>
+        <p>This is an exploration of an application of Euler's graph rules to find possible route loops for patrol vehicles to follow in order to cover all roads in a certain area while minimizing the amount of roads covered multiple times. The methods studied also serve to find snowplow routes and any other variation of the Chinese Postman Problem, especially those that involve weighting different roads in order to promote greater coverage of such roads.</p>
+        <p>This repository supplements a paper written as part of a combinatorics class. </p>
+        <h4>Overview</h4>
+        <ul>
+            <li>Parses portion of GeoJSON file as provided by local county GIS department into GraphML file.</li>
+            <li>Attempt to Eulerize GraphML file, which turns the graph (using the fewest possible changes) into one containing an Euler Circuit by adding duplicate edges, representing duplicated roads being covered in one patrol cycle.</li>
+            <li>Finds Euler circuit in Eulerized graph using either NetworkX module's built-in functions or a variation of dijkstra's algorithm as taught in class (Keller & Trotter 2017) and self-implemented.</li>
+            <li>Unparses Euler Circuit from graphml into GeoJSON</li>
+            <li>Visualizes GeoJSON file live & saves visualized file</li>
+        </ul>
+        <h4>Technologies Used</h4>
+        <ul>
+            <li>Python</li>
+            <li>NetworkX</li>
+            <li>MatPlotLib</li>
+            <li>SciPy</li>
+            <li>GeoPandas</li>
+        </ul>
+        <h4>Take a deeper look:</h4>
+        <ul><a href="https://github.com/charan00000/PolicePatrolOptmization-main"target="_blank">github.com/charan00000/PolicePatrolOptmization-main</a></ul>
+        <p>Check out the README.md for a more detailed explanation of the files & functionality.</p>
+        <p>Credits to Livana Lekas for working with me on the associated paper for this project.</p>
+    </main>
+</body>
+</html>
